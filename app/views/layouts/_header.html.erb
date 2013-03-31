@@ -1,7 +1,9 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "Place2b events", root_path, id: "logo" %>
+      <div class="brand">
+        <%= image_tag "logo.png", :size => "150x100"%>
+      </div>
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Home", '#' %></li>
@@ -21,7 +23,8 @@
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "Sign in", '#' %></li>
+            <li><%= link_to "Connexion", '#' %></li>
+            <li><%= link_to "Inscription", new_user_path %></li>
           <% end %>
         </ul>
       </nav>
