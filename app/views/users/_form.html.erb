@@ -1,4 +1,5 @@
-<%= form_for(@user) do |f| %>
+<div class="span6 offset3">
+<%= form_for(@user, :html => { :class => "form-horizontal"}) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -9,25 +10,29 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :lastname %><br />
+  <% end %> 
+  <div class="control-group">
+    <%= f.label :lastname %>
     <%= f.text_field :lastname %>
-  </div>
-  <div class="field">
-    <%= f.label :firstname %><br />
-    <%= f.text_field :firstname %>
-  </div>
-  <div class="field">
-    <%= f.label :birthdate %><br />
-    <%= f.text_field :birthdate %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
+
+    <%= f.label :firstname%>
+    <%= f.text_field :firstname%>
+    
+    <%= f.label :email %>
     <%= f.text_field :email %>
+
+    <%= f.label :birthdate %>
+    <%= f.text_field :birthdate %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password%>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+   <div class="form-actions">
+      <%= link_to 'Back', root_path %>
+      <%= f.submit "M'inscrire!", class: "btn-large btn-primary" %>
+   </div>
 <% end %>
+</div>

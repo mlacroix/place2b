@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :birthdate, :email, :firstname, :lastname
+  attr_accessible :birthdate, :email, :firstname, :lastname, :password, :password_confirmation
 
 #bcrypt ruby gem
   has_secure_password
