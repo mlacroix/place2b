@@ -61,9 +61,8 @@ p {
 
 /* header */
 
-#logo {
+.brand{
   float: left;
-  margin: 10px;
   font-size: 1.7em;
   color: #ddd;
   text-transform: uppercase;
@@ -71,9 +70,10 @@ p {
   padding-top: auto;
   font-weight: bold;
   line-height: 1;
+  background-color: transparent;
 }
 
-#logo:hover {
+.brand a:hover{
   color:#fff;
   background-color: transparent;
   text-decoration: none;
